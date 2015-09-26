@@ -1,1 +1,22 @@
-My Pages
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+    <head>
+        <script type="text/javascript" src="//api.skyscanner.net/api.ashx?key=3ed38d01-123d-4cea-9cfc-d9a2a7d04b68"></script>
+        <script type="text/javascript">
+            skyscanner.load("snippets","2");
+            function main(){
+                var snippet = new skyscanner.snippets.SearchPanelControl();
+                snippet.setMarket("UK")
+                snippet.setCulture("en-GB");
+                snippet.setCurrency("GBP");
+                snippet.setShape("box300x250");
+
+                snippet.draw(document.getElementById("snippet_searchpanel"));
+            }
+            skyscanner.setOnLoadCallback(main);
+        </script>
+    </head>
+    <body>
+        <div id="snippet_searchpanel" style="width: auto; height:auto;"></div>
+    </body>
+</html>
